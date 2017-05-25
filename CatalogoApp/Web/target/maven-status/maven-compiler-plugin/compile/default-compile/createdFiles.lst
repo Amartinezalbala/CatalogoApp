@@ -1,0 +1,6 @@
+com\ipartek\formacion\alvaromartinez\controladores\ProductoFormServlet.class
+com\ipartek\formacion\alvaromartinez\controladores\AltaServlet.class
+com\ipartek\formacion\alvaromartinez\controladores\UsuarioCRUDServlet.class
+com\ipartek\formacion\alvaromartinez\controladores\UsuarioFormServlet.class
+com\ipartek\formacion\alvaromartinez\controladores\LoginServlet.class
+com\ipartek\formacion\alvaromartinez\controladores\ProductoCRUDServlet.class
