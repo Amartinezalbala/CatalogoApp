@@ -1,4 +1,4 @@
-<%@ include file="includes/cabecera.jsp" %>
+<%@ include file="includes/cabeceraUsuarios.jsp" %>
 
 	<h2>LOGIN USUARIO</h2>
 
@@ -8,7 +8,7 @@
 	<form action="login" method="get">
 		<fieldset>
 			<label for="nombre">USUARIO :</label> <input id="nombre" name="nombre" 
-			required = "required" minlength="4"  value="${usuario.nombre}"/>
+			required = "required" minlength="6"  value="${usuario.nombre}"/>
 		</fieldset>
 		<fieldset>
 			<label for="pass">CONTRASEÑA :</label> <input type="password" id="pass"

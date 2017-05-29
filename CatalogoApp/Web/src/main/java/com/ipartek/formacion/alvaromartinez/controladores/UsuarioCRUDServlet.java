@@ -28,10 +28,10 @@ public class UsuarioCRUDServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
 			IOException {
 		ServletContext application = request.getServletContext();
-		UsuariosDAL dal = (UsuariosDAL) application.getAttribute("dal");
+		UsuariosDAL dal = (UsuariosDAL) application.getAttribute("dalUsuarios");
 
 		if (dal == null) {
-			dal = DALFactory.getUsuriosDAL();
+			dal = DALFactory.getUsuariosDAL();
 
 			dal.alta(new Usuario("usuario1", "pass11"));
 			dal.alta(new Usuario("usuario2", "pass22"));

@@ -31,16 +31,14 @@ public class Arranque implements ServletContextListener {
 		System.out.println("LISTA DESTRUIDA");
 	}
 
-	/**
-	 * @see ServletContextListener#contextInitialized(ServletContextEvent)
-	 */
 	public void contextInitialized(ServletContextEvent sce) {
 		ServletContext application = sce.getServletContext();
 		UsuariosDAL usuarioDAL = null;
-		usuarioDAL = DALFactory.getUsuriosDAL();
+		usuarioDAL = DALFactory.getUsuariosDAL();
 		usuarioDAL.alta(new Usuario("usuario1", "pass11"));
 		usuarioDAL.alta(new Usuario("usuario2", "pass22"));
 		application.setAttribute("dalUsuarios", usuarioDAL);
+		System.out.println("USUARIOS CARGADOS");
 
 		ProductosDAL productoDAL = null;
 		productoDAL = ProductosDALFactory.getProductosDAL();
@@ -50,7 +48,6 @@ public class Arranque implements ServletContextListener {
 		productoDAL.agregar(new Producto(3, "Boligrafo BIC Rojo", 1.00));
 		productoDAL.agregar(new Producto(4, "Boligrafo BIC Verde", 1.00));
 		application.setAttribute("dalProductos", productoDAL);
-
-		System.out.println("USUARIOS Y PRODUCTOS CARGADOS");
+		System.out.println("PRODUCTOS CARGADOS");
 	}
 }

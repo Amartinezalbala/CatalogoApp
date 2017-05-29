@@ -58,7 +58,7 @@ public class AltaServlet extends HttpServlet {
 				UsuariosDAL usuariosDAL = (UsuariosDAL) application.getAttribute(USUARIOS_DAL);
 
 				if (usuariosDAL == null) {
-					usuariosDAL = DALFactory.getUsuriosDAL();
+					usuariosDAL = DALFactory.getUsuariosDAL();
 				}
 
 				try {
@@ -66,9 +66,9 @@ public class AltaServlet extends HttpServlet {
 
 					request.getRequestDispatcher("/login").forward(request, response);
 					return;
-				} catch (UsuarioYaExistenteDALException de) {
+				} catch (UsuarioYaExistenteDALException uyede) {
 					usuario.setNombre("");
-					usuario.setErrores(de.getMessage());
+					usuario.setErrores(uyede.getMessage());
 					request.setAttribute("usuario", usuario);
 				} finally {
 					application.setAttribute(USUARIOS_DAL, usuariosDAL);

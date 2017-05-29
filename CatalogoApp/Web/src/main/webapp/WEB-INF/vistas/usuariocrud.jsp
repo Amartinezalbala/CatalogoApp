@@ -1,4 +1,4 @@
-<%@ include file="includes/cabeceraProductos.jsp"%>
+<%@ include file="includes/cabeceraUsuarios.jsp"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 

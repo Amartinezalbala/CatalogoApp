@@ -13,7 +13,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   static {
     _jspx_dependants = new java.util.ArrayList<String>(2);
-    _jspx_dependants.add("/WEB-INF/vistas/includes/cabecera.jsp");
+    _jspx_dependants.add("/WEB-INF/vistas/includes/cabeceraUsuarios.jsp");
     _jspx_dependants.add("/WEB-INF/vistas/includes/pie.jsp");
   }
 
@@ -52,13 +52,13 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\r\n");
       out.write("<head>\r\n");
       out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
-      out.write("<title>EJEMPLO MVC Y CRUD ÁLVARO</title>\r\n");
+      out.write("<title>USUARIOS ÁLVARO</title>\r\n");
       out.write("<link rel=\"stylesheet\" href=\"css/estilos.css\" />\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
       out.write("\t<header>\r\n");
-      out.write("\t<h2>EJEMPLO MVC Y CRUD</h2>\r\n");
-      out.write("\t<p>EJEMPLOS DE USO DE MVC Y CRUD</p>\r\n");
+      out.write("\t<h2>USUARIOS</h2>\r\n");
+      out.write("\t<p>LISTA DE USUARIOS</p>\r\n");
       out.write("\t<h5>");
       out.print( new java.util.Date() );
       out.write("</h5> \r\n");
@@ -66,8 +66,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t<nav>\r\n");
       out.write("\t<ul>\r\n");
       out.write("\t\t\t<li><a href=\"?op=alta\">ALTA</a></li>\r\n");
-      out.write("\t\t\t<li><a href=\"login\">LOGIN</a></li>\r\n");
-      out.write("\t\t\t<li><a href=\"UsuarioCRUD\">MANTENIMIENTO USUARIOS</a></li>\r\n");
+      out.write("\t\t\t<li><a href=\"UsuarioCRUD\">LISTA DE USUARIOS</a></li>\r\n");
       out.write("\t\t\t<li><a href=\"login?opcion=logout\">SALIR</a></li>\r\n");
       out.write("\t\t</ul>\r\n");
       out.write("\t</nav>");
@@ -89,7 +88,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t<form action=\"login\" method=\"get\">\r\n");
       out.write("\t\t<fieldset>\r\n");
       out.write("\t\t\t<label for=\"nombre\">USUARIO :</label> <input id=\"nombre\" name=\"nombre\" \r\n");
-      out.write("\t\t\trequired = \"required\" minlength=\"4\"  value=\"");
+      out.write("\t\t\trequired = \"required\" minlength=\"6\"  value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${usuario.nombre}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\"/>\r\n");
       out.write("\t\t</fieldset>\r\n");

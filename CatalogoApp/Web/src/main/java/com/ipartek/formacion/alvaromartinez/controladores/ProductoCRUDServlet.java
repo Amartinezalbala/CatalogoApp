@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ipartek.formacion.DAL.ProductosDAL;
-import com.ipartek.formacion.DAL.ProductosDALFactory;
 import com.ipartek.formacion.Tipos.Producto;
 
 @WebServlet("/productocrud")
@@ -31,16 +30,16 @@ public class ProductoCRUDServlet extends HttpServlet {
 		ServletContext application = request.getServletContext();
 		ProductosDAL dalProductos = (ProductosDAL) application.getAttribute("dalProductos");
 
-		if (dalProductos == null) {
-			dalProductos = ProductosDALFactory.getProductosDAL();
-
-			dalProductos.agregar(new Producto(0, "Boligrafo BIC Blanco", 1.00));
-			dalProductos.agregar(new Producto(1, "Boligrafo BIC Azul", 1.00));
-			dalProductos.agregar(new Producto(2, "Boligrafo BIC Negro", 1.00));
-			dalProductos.agregar(new Producto(3, "Boligrafo BIC Rojo", 1.00));
-			dalProductos.agregar(new Producto(4, "Boligrafo BIC Verde", 1.00));
-			application.setAttribute("dalProductos", dalProductos);
-		}
+		// if (dalProductos == null) {
+		// dalProductos = ProductosDALFactory.getProductosDAL();
+		//
+		// dalProductos.agregar(new Producto(0, "Boligrafo BIC Blanco", 1.00));
+		// dalProductos.agregar(new Producto(1, "Boligrafo BIC Azul", 1.00));
+		// dalProductos.agregar(new Producto(2, "Boligrafo BIC Negro", 1.00));
+		// dalProductos.agregar(new Producto(3, "Boligrafo BIC Rojo", 1.00));
+		// dalProductos.agregar(new Producto(4, "Boligrafo BIC Verde", 1.00));
+		// application.setAttribute("dalProductos", dalProductos);
+		// }
 
 		String op = request.getParameter("op");
 

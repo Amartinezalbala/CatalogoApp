@@ -52,7 +52,7 @@ public class LoginServlet extends HttpServlet {
 
 		if (usuariosDAL == null) {
 			System.out.println("Lista de usuarios vacia");
-			usuariosDAL = DALFactory.getUsuriosDAL();
+			usuariosDAL = DALFactory.getUsuariosDAL();
 		}
 
 		// S�lo para crear una base de datos falsa con el
@@ -67,7 +67,13 @@ public class LoginServlet extends HttpServlet {
 		response.addCookie(cookie);
 
 		// ESTADOS
+		System.out.println(usuario);
 		boolean esValido = usuariosDAL.validar(usuario);
+		System.out.println(esValido);
+
+		for (Usuario user : usuariosDAL.buscarTodosLosUsuarios()) {
+			System.out.println("LISTADO: " + user);
+		}
 
 		boolean sinParametros = usuario.getNombre() == null;
 

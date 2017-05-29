@@ -49,7 +49,7 @@ public class UsuarioFormServlet extends HttpServlet {
 		Usuario usuario = new Usuario(nombre, pass);
 
 		ServletContext application = request.getServletContext();
-		UsuariosDAL dal = (UsuariosDAL) application.getAttribute("dal");
+		UsuariosDAL dal = (UsuariosDAL) application.getAttribute("dalUsuarios");
 
 		switch (op) {
 		case "alta":
