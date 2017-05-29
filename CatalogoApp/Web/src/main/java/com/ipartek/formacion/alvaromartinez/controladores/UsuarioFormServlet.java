@@ -10,10 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.ipartek.formacion.DAL.DALException;
-import org.ipartek.formacion.DAL.UsuarioYaExistenteDALException;
-import org.ipartek.formacion.DAL.UsuariosDAL;
-
+import com.ipartek.formacion.DAL.DALException;
+import com.ipartek.formacion.DAL.UsuarioYaExistenteDALException;
+import com.ipartek.formacion.DAL.UsuariosDAL;
 import com.ipartek.formacion.Tipos.Usuario;
 
 @WebServlet("/UsuarioForm")

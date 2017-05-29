@@ -9,9 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.ipartek.formacion.DAL.DALFactory;
-import org.ipartek.formacion.DAL.UsuariosDAL;
-
+import com.ipartek.formacion.DAL.DALFactory;
+import com.ipartek.formacion.DAL.UsuariosDAL;
 import com.ipartek.formacion.Tipos.Usuario;
 
 @WebServlet("/UsuarioCRUD")
@@ -34,8 +33,8 @@ public class UsuarioCRUDServlet extends HttpServlet {
 		if (dal == null) {
 			dal = DALFactory.getUsuriosDAL();
 
-			dal.alta(new Usuario("usuario1", "pass1"));
-			dal.alta(new Usuario("usuario2", "pass2"));
+			dal.alta(new Usuario("usuario1", "pass11"));
+			dal.alta(new Usuario("usuario2", "pass22"));
 
 			application.setAttribute("dal", dal);
 		}

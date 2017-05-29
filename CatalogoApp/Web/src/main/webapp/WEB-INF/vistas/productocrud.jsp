@@ -13,7 +13,7 @@
   		</tr>
   	</thead>
   	<tbody>
-  		<c:forEach items="${requestScope.productos}" var="producto">
+  		<c:forEach items="${applicationScope.productos}" var="producto">
   			<tr>
     			<td>
 					<a href="?op=modificar&id=${producto.id}">MODIFICAR</a>

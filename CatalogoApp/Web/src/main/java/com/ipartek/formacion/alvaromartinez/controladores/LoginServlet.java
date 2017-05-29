@@ -11,9 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.ipartek.formacion.DAL.DALFactory;
-import org.ipartek.formacion.DAL.UsuariosDAL;
-
+import com.ipartek.formacion.DAL.DALFactory;
+import com.ipartek.formacion.DAL.UsuariosDAL;
 import com.ipartek.formacion.Tipos.Usuario;
 
 @WebServlet("/login")
@@ -49,9 +48,10 @@ public class LoginServlet extends HttpServlet {
 
 		ServletContext application = request.getServletContext();
 
-		UsuariosDAL usuariosDAL = (UsuariosDAL) application.getAttribute(AltaServlet.USUARIOS_DAL);
+		UsuariosDAL usuariosDAL = (UsuariosDAL) application.getAttribute("dalUsuarios");
 
 		if (usuariosDAL == null) {
+			System.out.println("Lista de usuarios vacia");
 			usuariosDAL = DALFactory.getUsuriosDAL();
 		}
 

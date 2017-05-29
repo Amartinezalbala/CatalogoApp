@@ -10,9 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.ipartek.formacion.DAL.ProductoYaExistenteDALException;
-import org.ipartek.formacion.DAL.ProductosDAL;
-
+import com.ipartek.formacion.DAL.ProductoYaExistenteDALException;
+import com.ipartek.formacion.DAL.ProductosDAL;
 import com.ipartek.formacion.Tipos.Producto;
 
 @WebServlet("/productoform")
@@ -55,12 +54,12 @@ public class ProductoFormServlet extends HttpServlet {
 		Producto producto = new Producto(idForm, nombreForm, precioForm);
 
 		ServletContext application = request.getServletContext();
-		ProductosDAL dal = (ProductosDAL) application.getAttribute("dal");
+		ProductosDAL productosDAL = (ProductosDAL) application.getAttribute("dalProductos");
 
 		switch (op) {
 		case "agregar":
 			try {
-				dal.agregar(producto);
+				productosDAL.agregar(producto);
 			} catch (ProductoYaExistenteDALException pye) {
 				producto.setErrores(pye.getMessage());
 				request.setAttribute("producto", producto);
@@ -70,11 +69,11 @@ public class ProductoFormServlet extends HttpServlet {
 			rutaListado.forward(request, response);
 			break;
 		case "modificar":
-			dal.modificar(producto);
+			productosDAL.modificar(producto);
 			rutaListado.forward(request, response);
 			break;
 		case "borrar":
-			dal.borrar(producto);
+			productosDAL.borrar(producto);
 			rutaListado.forward(request, response);
 			break;
 		}

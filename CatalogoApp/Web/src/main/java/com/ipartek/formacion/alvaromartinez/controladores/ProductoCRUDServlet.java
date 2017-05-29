@@ -9,9 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.ipartek.formacion.DAL.ProductosDAL;
-import org.ipartek.formacion.DAL.ProductosDALFactory;
-
+import com.ipartek.formacion.DAL.ProductosDAL;
+import com.ipartek.formacion.DAL.ProductosDALFactory;
 import com.ipartek.formacion.Tipos.Producto;
 
 @WebServlet("/productocrud")
@@ -30,24 +29,24 @@ public class ProductoCRUDServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
 			IOException {
 		ServletContext application = request.getServletContext();
-		ProductosDAL dal = (ProductosDAL) application.getAttribute("dal");
+		ProductosDAL dalProductos = (ProductosDAL) application.getAttribute("dalProductos");
 
-		if (dal == null) {
-			dal = ProductosDALFactory.getProductosDAL();
+		if (dalProductos == null) {
+			dalProductos = ProductosDALFactory.getProductosDAL();
 
-			dal.agregar(new Producto(0, "Boligrafo BIC Blanco", 1.00));
-			dal.agregar(new Producto(1, "Boligrafo BIC Azul", 1.00));
-			dal.agregar(new Producto(2, "Boligrafo BIC Negro", 1.00));
-			dal.agregar(new Producto(3, "Boligrafo BIC Rojo", 1.00));
-			dal.agregar(new Producto(4, "Boligrafo BIC Verde", 1.00));
-			application.setAttribute("dal", dal);
+			dalProductos.agregar(new Producto(0, "Boligrafo BIC Blanco", 1.00));
+			dalProductos.agregar(new Producto(1, "Boligrafo BIC Azul", 1.00));
+			dalProductos.agregar(new Producto(2, "Boligrafo BIC Negro", 1.00));
+			dalProductos.agregar(new Producto(3, "Boligrafo BIC Rojo", 1.00));
+			dalProductos.agregar(new Producto(4, "Boligrafo BIC Verde", 1.00));
+			application.setAttribute("dalProductos", dalProductos);
 		}
 
 		String op = request.getParameter("op");
 
 		if (op == null) {
 
-			Producto[] productos = dal.buscarLosProductos();
+			Producto[] productos = dalProductos.buscarLosProductos();
 
 			request.setAttribute("productos", productos);
 
@@ -60,7 +59,7 @@ public class ProductoCRUDServlet extends HttpServlet {
 			switch (op) {
 			case "modificar":
 			case "borrar":
-				producto = dal.buscarPorId(Integer.parseInt(id));
+				producto = dalProductos.buscarPorId(Integer.parseInt(id));
 				request.setAttribute("producto", producto);
 			case "agregar":
 				request.getRequestDispatcher(RUTA_FORMULARIO).forward(request, response);
