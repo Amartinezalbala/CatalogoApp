@@ -65,7 +65,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t</header>\r\n");
       out.write("\t<nav>\r\n");
       out.write("\t<ul>\r\n");
-      out.write("\t\t\t<li><a href=\"?op=alta\">ALTA</a></li>\r\n");
+      out.write("\t\t\t<li><a href=\"UsuarioCRUD?op=alta\">ALTA</a></li>\r\n");
       out.write("\t\t\t<li><a href=\"UsuarioCRUD\">LISTA DE USUARIOS</a></li>\r\n");
       out.write("\t\t\t<li><a href=\"login?opcion=logout\">SALIR</a></li>\r\n");
       out.write("\t\t</ul>\r\n");
@@ -109,7 +109,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t<h5>");
       out.print( new java.util.Date() );
       out.write("</h5>\r\n");
-      out.write("\t&COPY;2017 ÁLVARO MARTÍNEZ ALBALÁ</p>\r\n");
+      out.write("\t<h4>&COPY;2017 ÁLVARO MARTÍNEZ ALBALÁ</h4></p>\r\n");
       out.write("\r\n");
       out.write("\t</footer>\r\n");
       out.write("</body>\r\n");

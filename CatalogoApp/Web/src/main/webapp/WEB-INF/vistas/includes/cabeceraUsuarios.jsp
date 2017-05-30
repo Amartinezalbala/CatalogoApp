@@ -15,7 +15,7 @@
 	</header>
 	<nav>
 	<ul>
-			<li><a href="?op=alta">ALTA</a></li>
+			<li><a href="UsuarioCRUD?op=alta">ALTA</a></li>
 			<li><a href="UsuarioCRUD">LISTA DE USUARIOS</a></li>
 			<li><a href="login?opcion=logout">SALIR</a></li>
 		</ul>

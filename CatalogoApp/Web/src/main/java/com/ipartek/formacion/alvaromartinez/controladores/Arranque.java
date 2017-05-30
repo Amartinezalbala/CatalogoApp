@@ -11,22 +11,12 @@ import com.ipartek.formacion.DAL.UsuariosDAL;
 import com.ipartek.formacion.Tipos.Producto;
 import com.ipartek.formacion.Tipos.Usuario;
 
-/**
- * Application Lifecycle Listener implementation class Arranque
- *
- */
 public class Arranque implements ServletContextListener {
 
-	/**
-	 * Default constructor.
-	 */
 	public Arranque() {
-		// TODO Auto-generated constructor stub
+		System.out.println("COPIA DE DATOS");
 	}
 
-	/**
-	 * @see ServletContextListener#contextDestroyed(ServletContextEvent)
-	 */
 	public void contextDestroyed(ServletContextEvent sce) {
 		System.out.println("LISTA DESTRUIDA");
 	}
@@ -35,6 +25,9 @@ public class Arranque implements ServletContextListener {
 		ServletContext application = sce.getServletContext();
 		UsuariosDAL usuarioDAL = null;
 		usuarioDAL = DALFactory.getUsuariosDAL();
+		usuarioDAL.alta(new Usuario("admin0", "admin0"));
+		System.out.println("ADMINISTRADOR CREADO");
+		usuarioDAL.alta(new Usuario("usuario0", "pass00"));
 		usuarioDAL.alta(new Usuario("usuario1", "pass11"));
 		usuarioDAL.alta(new Usuario("usuario2", "pass22"));
 		application.setAttribute("dalUsuarios", usuarioDAL);

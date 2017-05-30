@@ -4,4 +4,5 @@ com\ipartek\formacion\alvaromartinez\controladores\LoginServlet.class
 com\ipartek\formacion\alvaromartinez\controladores\ProductoCRUDServlet.class
 com\ipartek\formacion\alvaromartinez\controladores\ProductoFormServlet.class
 com\ipartek\formacion\alvaromartinez\controladores\AltaServlet.class
+com\ipartek\formacion\alvaromartinez\AdminFilter.class
 com\ipartek\formacion\alvaromartinez\controladores\UsuarioCRUDServlet.class
