@@ -53,7 +53,9 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<head>\r\n");
       out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       out.write("<title>USUARIOS ÁLVARO</title>\r\n");
-      out.write("<link rel=\"stylesheet\" href=\"css/estilos.css\" />\r\n");
+      out.write("<link rel=\"stylesheet\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/css/estilos.css\" />\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
       out.write("\t<header>\r\n");

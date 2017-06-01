@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>USUARIOS ÁLVARO</title>
-<link rel="stylesheet" href="css/estilos.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/estilos.css" />
 </head>
 <body>
 	<header>

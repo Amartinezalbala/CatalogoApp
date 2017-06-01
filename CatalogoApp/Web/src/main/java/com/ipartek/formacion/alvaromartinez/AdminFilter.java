@@ -15,6 +15,9 @@ import com.ipartek.formacion.Tipos.Usuario;
 
 public class AdminFilter implements Filter {
 
+	final static String admin = "admin";
+	final static String RUTA_LOGIN = "/login";
+
 	public AdminFilter() {
 	}
 
@@ -30,20 +33,23 @@ public class AdminFilter implements Filter {
 		// ¿¿Esta logeado??
 		if (usuario == null) {
 			System.out.println("NO HAY USUARIO LOGEADO");
+			HttpServletRequest httpRequest = (HttpServletRequest) request;
+			httpRequest.getRequestDispatcher(RUTA_LOGIN).forward(request, response);
 		} else {
-			System.out.println("USUARIO: " + usuario);
-		}
-		// admin usuarios
-		final String admin = "admin";
-		if (usuario.getNombre().substring(0, 5).equals(admin)) {
-			System.out.println("¡¡BIENVENIDO " + usuario + "¡¡");
+			System.out.println("USUARIO: " + usuario.getNombre());
+			// admin usuarios
+
+			if (usuario.getNombre().substring(0, 5).equals(admin)) {
+				System.out.println("¡¡BIENVENIDO " + usuario.getNombre() + "¡¡");
+			} else {
+				HttpServletRequest httpRequest = (HttpServletRequest) request;
+				httpRequest.getRequestDispatcher(RUTA_LOGIN).forward(request, response);
+			}
 		}
 		// pass the request along the filter chain
 		chain.doFilter(request, response);
 	}
 
 	public void init(FilterConfig fConfig) throws ServletException {
-
 	}
-
 }
