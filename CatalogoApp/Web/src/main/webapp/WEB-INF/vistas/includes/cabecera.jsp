@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>EJEMPLO MVC Y CRUD ÁLVARO</title>
+<title>MVC Y CRUD ÁLVARO</title>
 <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
 	<header>
-	<h2>EJEMPLO MVC Y CRUD</h2>
-	<p>EJEMPLOS DE USO DE MVC Y CRUD</p>
+	<h2>MVC Y CRUD</h2>
+	<p>USO DE MVC Y CRUD</p>
 	<h5><%= new java.util.Date() %></h5> 
 	</header>
 	<nav>

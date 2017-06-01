@@ -10,13 +10,13 @@
 <body>
 	<header>
 	<h2>PRODUCTOS</h2>
-	<p>EJEMPLOS DE PRODUCTOS</p>
+	<p>LISTA DE PRODUCTOS</p>
 	<h5><%= new java.util.Date() %></h5> 
 	</header>
 	<nav>
 	<ul>
 			<li><a href="?op=agregar">AGREGAR</a></li>
 			<li><a href="productocrud">LISTA DE PRODUCTOS</a></li>
-			<li><a href="productocrud">SALIR</a></li>
+			<li><a href="login?opcion=logout">">SALIR</a></li>
 		</ul>
 	</nav>

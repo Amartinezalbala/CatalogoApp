@@ -6,6 +6,6 @@ package com.ipartek.formacion.DAL;
  */
 public class App {
 	public static void main(String[] args) {
-		System.out.println("Hello World DAL!");
+		System.out.println("Hola DAL!");
 	}
 }
