@@ -14,7 +14,7 @@ import com.ipartek.formacion.DAL.ProductoYaExistenteDALException;
 import com.ipartek.formacion.DAL.ProductosDAL;
 import com.ipartek.formacion.Tipos.Producto;
 
-@WebServlet("/productoform")
+@WebServlet("/admin/productoform")
 public class ProductoFormServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

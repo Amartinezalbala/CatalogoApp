@@ -14,7 +14,7 @@ import com.ipartek.formacion.DAL.UsuarioYaExistenteDALException;
 import com.ipartek.formacion.DAL.UsuariosDAL;
 import com.ipartek.formacion.Tipos.Usuario;
 
-@WebServlet("/alta")
+@WebServlet("/admin/alta")
 public class AltaServlet extends HttpServlet {
 	/* package */static final String USUARIOS_DAL = "usuariosDAL";
 

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.ipartek.formacion.DAL.ProductosDAL;
 import com.ipartek.formacion.Tipos.Producto;
 
-@WebServlet("/productocrud")
+@WebServlet("/admin/productocrud")
 public class ProductoCRUDServlet extends HttpServlet {
 
 	static final String RUTA_FORMULARIO = "/WEB-INF/vistas/productoform.jsp";

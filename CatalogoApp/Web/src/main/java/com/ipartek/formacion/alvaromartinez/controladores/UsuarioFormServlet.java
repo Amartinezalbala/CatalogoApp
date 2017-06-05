@@ -15,7 +15,7 @@ import com.ipartek.formacion.DAL.UsuarioYaExistenteDALException;
 import com.ipartek.formacion.DAL.UsuariosDAL;
 import com.ipartek.formacion.Tipos.Usuario;
 
-@WebServlet("/UsuarioForm")
+@WebServlet("/admin/UsuarioForm")
 public class UsuarioFormServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

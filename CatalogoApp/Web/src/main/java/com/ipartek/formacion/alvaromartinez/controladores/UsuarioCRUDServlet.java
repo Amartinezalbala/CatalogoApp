@@ -13,7 +13,7 @@ import com.ipartek.formacion.DAL.DALFactory;
 import com.ipartek.formacion.DAL.UsuariosDAL;
 import com.ipartek.formacion.Tipos.Usuario;
 
-@WebServlet("/UsuarioCRUD")
+@WebServlet("/admin/UsuarioCRUD")
 public class UsuarioCRUDServlet extends HttpServlet {
 	static final String RUTA_FORMULARIO = "/WEB-INF/vistas/usuarioform.jsp";
 	static final String RUTA_LISTADO = "/WEB-INF/vistas/usuariocrud.jsp";

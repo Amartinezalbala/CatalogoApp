@@ -17,6 +17,7 @@
 	<ul>
 			<li><a href="UsuarioCRUD?op=alta">ALTA</a></li>
 			<li><a href="UsuarioCRUD">LISTA DE USUARIOS</a></li>
+			<li><a href="productocrud">LISTA DE PRODUCTOS</a><li>
 			<li><a href="login?opcion=logout">SALIR</a></li>
 		</ul>
 	</nav>
